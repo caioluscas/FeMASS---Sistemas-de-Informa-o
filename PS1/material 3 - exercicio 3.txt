@@ -1,0 +1,46 @@
+import java.util.*;
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    ArrayList <ArrayList<Double>> matriz = new ArrayList<>(); 
+    ArrayList<Double> diagonal = new ArrayList<>();
+    Scanner scan = new Scanner (System.in);
+    Double ordem, numero;
+    try{
+      do{
+      
+      System.out.print("Diga a ordem da matriz: ");
+      ordem = scan.nextDouble();
+      
+    }while(ordem<0);
+    }
+    catch (NumberFormatException erro){
+      System.out.println("\nDigita numero mano");
+      }
+      catch (ArrayIndexOutOfBoundsException erro){
+      System.out.println("\nPassou do limite mano");
+      }
+    catch (Exception erro){
+    System.out.println(erro.getMessage());
+    erro.printStackTrace();
+    }
+    
+    
+    for(int i=0; i<ordem; i++){
+    matriz.add(new ArrayList<>());
+      for(int j=0; j<ordem; j++){
+        System.out.print("\nadicionar: ");
+        numero = scan.nextDouble();                 //preenchendo matriz
+        matriz.get(i).add(numero);
+      }
+    }
+
+    for(ArrayList<Double> linha: matriz){
+      System.out.println();
+      for(double item: linha){                      //imprimindo
+        System.out.println("\t"+item);
+      }
+    }
+    
+  }
+}

@@ -1,0 +1,20 @@
+import javax.swing.JOptionPane; 
+class Main {
+  public static void main(String[] args) {
+    try{
+      int n1 = Integer.parseInt(JOptionPane.showInputDialog("Numero 1:"));
+      int n2 = Integer.parseInt(JOptionPane.showInputDialog("Numero 2:"));
+      float resultado = n1/n2;
+      JOptionPane.showMessageDialog(null, resultado);
+      System.out.println("Sucesso na execução");
+    }
+    
+      catch (Exception erro){
+      System.out.println(erro.getMessage());
+      erro.printStackTrace();
+}
+    
+    
+    
+  }
+}

@@ -1,0 +1,170 @@
+package questao3prova;
+
+public class Teste {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Funcionario fun = new Funcionario();
+		fun.setNome("Isac\t");
+		fun.setSalario_base(20000);
+		
+		Freelancere fre = new Freelancere();
+		fre.setNome("Natasha");
+		fre.setSalario_base(30298);
+		fre.setDias_trabalhados(12);
+		fre.setValor_dia(23);
+		
+		Vendedor ve = new Vendedor();
+		ve.setNome("Caio");
+		ve.setSalario_base(30298);
+		
+		
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+package questao3prova;
+
+public class Funcionario {
+	protected String nome;
+	protected double salario_base;
+	public Funcionario(String nome, double salario_base) {
+		super();
+		this.nome = nome;
+		this.salario_base = salario_base;
+	}
+	public Funcionario() {
+		
+	}
+	
+	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public double getSalario_base() {
+		return salario_base;
+	}
+	public void setSalario_base(double salario_base) {
+		this.salario_base = salario_base;
+	}
+	public double Calcular_encargos() {
+		return salario_base*0.1;
+	}
+	
+	
+	
+
+}
+
+
+
+
+
+
+
+
+
+package questao3prova;
+
+public class Freelancere extends Funcionario{
+	private int dias_trabalhados;
+	private double valor_dia;
+	
+	
+	public Freelancere() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Freelancere(String nome, double salario_base, int dias_trabalhados, double valor_dia) {
+		super(nome, salario_base);
+		// TODO Auto-generated constructor stub
+		this.dias_trabalhados = dias_trabalhados;
+		this.valor_dia = valor_dia;
+	}
+
+	public int getDias_trabalhados() {
+		return dias_trabalhados;
+	}
+	protected double setDias_trabalhados(int dias_trabalhados) {
+		return  dias_trabalhados;
+	}
+	public double getValor_dia() {
+		return valor_dia;
+	}
+	public void setValor_dia(double valor_dia) {
+		this.valor_dia = valor_dia;
+	}
+	
+	
+	
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package questao3prova;
+
+public class Vendedor extends Funcionario{
+	private double comissao;
+
+
+	public Vendedor(String nome, double salario_base, double comissao) {
+		super(nome, salario_base);
+		this.comissao = comissao;
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+	public Vendedor() {
+		
+	}
+	
+	
+
+	public double getComissao() {
+		return comissao;
+	}
+
+	
+	private void setComissao(double comissao) {
+		this.comissao = comissao;
+	}
+	
+	
+	public double Calcular_encargos(){
+		return 	salario_base*0.9;
+	}
+	
+
+}

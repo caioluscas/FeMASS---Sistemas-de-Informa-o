@@ -1,0 +1,27 @@
+1) Seja a tabela abaixo:
+xi	yi
+1	1.3
+2	3.5
+3	4.2
+4	5.0
+5	7.0
+6	8.8
+7	10.1
+8	12.5
+9	13.0
+10	15.6
+
+a)Ajustar por um polinomio de 1 grau
+b)Ajustar por um polinomio de 2 grau
+c)Ajustar por um polinomio de 3 grau
+d)Apresentar os residuos de cada polinomio
+
+2) Seja f(x) = 1/x:
+A) Calcular P(s) por um polinomio interpolador de Lagrange do 1 grau
+b) Calcular P(s) por um polinomio interpolador de Lagrange do 2 grau
+c) Calcular P(s) por um polinomio interpolador de Lagrange do 3 grau
+
+			      3
+3) f(x) = 3^e^x - 5. Calcule S F(x)dx.
+			      -1
+Obs: Enviar os arquivos .cpp. Ao rodar, devera apresentar as respostas

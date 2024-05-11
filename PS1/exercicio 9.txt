@@ -1,0 +1,57 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
+ */
+
+package com.mycompany.exercicio91caio;
+
+/**
+ *
+ * @author Caio
+ */
+import java.util.*;
+import java.util.Scanner;
+public class Exercicio91caio {
+
+    public static void main(String[] args) {
+         ArrayList <ArrayList<Double>> matriz = new ArrayList<>();    //criando matriz vazia
+        Double ale;
+      
+        
+        for(int i=0; i<50; i++){
+            matriz.add(new ArrayList<>()); //adiciona linha a sua matriz
+            for(int j=0; j<20; j++){
+                ale = (Double)(50+ Math.random()*1000);
+                matriz.get(i).add(ale);  //pega tds valores de ale e adiciona a matriz, tbm pede para fzr rand na linha
+                
+            }
+        }
+        
+        for(ArrayList<Double> linha: matriz){
+            System.out.println();
+            for(double item : linha){
+                System.out.print("\t"+item);
+                //
+            }
+        }
+        
+        
+      
+        Scanner scan = new Scanner(System.in); //ser para ler
+        double numero;
+        do{
+            System.out.print("\nDiga um numero entre 50 e 1050:");
+             numero = scan.nextInt();
+               for(int i=0; i< matriz.size(); i++){ //o size retorna o numero de linhas dentro do quadradinho
+                    for(int j=0; j<matriz.get(i).size(); j++){ //retorna o numero de colunas da linha
+                     if(numero==matriz.get(i).get(j)){
+                        System.out.println("Numero encontrado na linha "+i+" e na coluna "+j);
+                }
+                     
+            }
+            
+        }
+        }while(numero>=50 && numero<=1050);
+        System.out.println("Valor fora do rand");
+    }
+}
